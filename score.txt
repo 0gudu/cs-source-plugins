@@ -64,7 +64,7 @@ public void Event_RoundEnd(Handle event, const char[] name, bool dontBroadcast)
     }
     else if (win_team == 3) // TEAM_CT
     {
-        if (rounds == 15){
+        if (rounds >= 15){
             g_nTScoreH1++;
         }else{
             g_nCTScoreH1++;
