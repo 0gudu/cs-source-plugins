@@ -52,7 +52,7 @@ public void Event_RoundEnd(Handle event, const char[] name, bool dontBroadcast)
 {
     int rounds = g_nCTScoreH1 + g_nTScoreH1;
     int win_team = GetEventInt(event, "winner");
-    if(rounds == 14){
+    if(rounds == 13){
         PrintToChatAll("One round remaining before halftime!!!!!");
     }
     if (win_team == 2) // TEAM_T
@@ -63,7 +63,6 @@ public void Event_RoundEnd(Handle event, const char[] name, bool dontBroadcast)
             g_nTScoreH1++;
         }
         
-        PrintToChatAll("TR scores: %d", g_nTScoreH1);
     }
     else if (win_team == 3) // TEAM_CT
     {
@@ -74,6 +73,5 @@ public void Event_RoundEnd(Handle event, const char[] name, bool dontBroadcast)
             
         }
         
-        PrintToChatAll("CT scores: %d", g_nCTScoreH1);
     }
 }
